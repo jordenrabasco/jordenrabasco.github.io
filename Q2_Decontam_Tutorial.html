@@ -384,8 +384,8 @@ sequences in marker-gene and metagenomics data. Microbiome 6, 226
 </div>
 <div id="installation-and-base-actions" class="section level1">
 <h1>Installation and base actions</h1>
-<p>q2-Decontam functionality is included in the base amplicon and
-metagenomic QIIME 2 distributions under the quality-control umbrella.
+<p>Q2-Decontam functionality is included in the base Amplicon and
+Metagenomic QIIME 2 distributions under the quality-control umbrella.
 Q2-Decontam consists of two main actions:</p>
 <ul>
 <li><p><code>qiime quality-control decontam-identify</code></p></li>
@@ -397,7 +397,9 @@ object is then passed into the <code>decontam-score-viz</code> action to
 visualize the distribution of decontam scores and help determine where
 the threshold should be set to eliminate the majority of contaminants
 but not remove true features from the data. To remove contaminants you
-will need to utilize <code>filter-table</code> actions.</p>
+will need to utilize <code>filter-table</code> actions. To install a
+local version of QIIME 2 via conda you can find installation
+instructions <a href="https://docs.qiime2.org/2024.10/install/native/">here</a>.</p>
 </div>
 <div id="tutorial-and-walkthrough" class="section level1">
 <h1>Tutorial and Walkthrough</h1>
@@ -560,12 +562,17 @@ following command:</p>
 <div id="remove-contaminants-identified-by-decontam" class="section level2">
 <h2>Remove Contaminants Identified by Decontam</h2>
 <p>To remove the contaminant features use the <code>filter-table</code>
-actions. This code removes features whose decontam scores fall below a
-user defined threshold. Those features are treated as contaminants and
-removed from the feature table and the representative sequences table
-mentioned previously to assist in accurate, contaminant free downstream
-processing within the qiime environment such as phylogenetic tree
-generation.</p>
+actions. The code below, specifically the <code>--p-where</code> flag
+utilizes SQLite syntax to filter features or samples. The code below
+removes features whose decontam scores fall below a user defined
+threshold, in this case 0.1. To change the desired threshold, augment
+the 0.1 in the shown command to any value between 0-1. Those features
+that fall below the aforementioned threshold are treated as contaminants
+and removed from the feature table and the representative sequences
+table mentioned previously to assist in accurate, contaminant free
+downstream processing within the QIIME 2 environment such as
+phylogenetic tree generation. For more information on the
+filter-features plugin please visit their dedicated page <a href="https://docs.qiime2.org/2024.10/plugins/available/feature-table/filter-features/">here</a>.</p>
 <pre class="bash"><code>qiime feature-table filter-features --i-table table.qza --m-metadata-file comb_decontam_scores.qza --p-where &#39;[p]&gt;0.1 OR [p] IS NULL&#39; --o-filtered-table filtered-table.qza</code></pre>
 <pre class="bash"><code>qiime feature-table filter-seqs --i-data rep_seqs.qza --i-table filtered-table.qza --o-filtered-data filtered_rep_seq.qza</code></pre>
 <p>This will output two files the filtered feature table and the
