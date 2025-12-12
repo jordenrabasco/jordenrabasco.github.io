@@ -573,14 +573,14 @@ following command:</p>
 <div id="remove-contaminants-identified-by-decontam" class="section level2">
 <h2>Remove Contaminants Identified by Decontam</h2>
 <p>To remove the contaminant features use the <code>filter-table</code>
-actions. The code below, specifically the <code>--p-where</code> flag
+actions. The code below, specifically the <code>--p-where</code> flag,
 utilizes SQLite syntax to filter features or samples. The code below
 removes features whose decontam scores fall below a user defined
 threshold, in this case 0.1. To change the desired threshold, augment
-the 0.1 in the shown command to any value between 0-1. Those features
-that fall below the aforementioned threshold are treated as contaminants
-and removed from the feature table and the representative sequences
-table mentioned previously to assist in accurate, contaminant free
+the <code>0.1</code> in the shown command to any value between 0-1.
+Those features that fall below the aforementioned threshold are treated
+as contaminants and removed from the feature table and the
+representative sequences table to assist in accurate, contaminant free
 downstream processing within the QIIME 2 environment such as
 phylogenetic tree generation. For more information on the
 filter-features plugin please visit their dedicated page <a href="https://docs.qiime2.org/2024.10/plugins/available/feature-table/filter-features/">here</a>.</p>
