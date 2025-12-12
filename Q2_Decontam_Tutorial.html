@@ -382,6 +382,17 @@ J. Simple statistical identification and removal of contaminant
 sequences in marker-gene and metagenomics data. Microbiome 6, 226
 (2018).</a></p>
 </div>
+<div id="qiime-2-basics" class="section level1">
+<h1>QIIME 2 Basics</h1>
+<ul>
+<li><p>If you’re completely new to QIIME 2, we recommend reading <a href="https://amplicon-docs.qiime2.org/en/latest/explanations/getting-started.html">Getting
+Started with QIIME 2</a> to familiarize yourself with concepts that may
+be helpful.</p></li>
+<li><p>To export any of the objects used within the tutorial, the
+<code>qiime tools export</code> actions the documentation for which can
+be found <a href="https://docs.qiime2.org/2024.10/tutorials/exporting/">here</a></p></li>
+</ul>
+</div>
 <div id="installation-and-base-actions" class="section level1">
 <h1>Installation and base actions</h1>
 <p>Q2-Decontam functionality is included in the base Amplicon and
@@ -557,7 +568,7 @@ found <a href="https://view.qiime2.org/">here</a><br />
 To run <code>decontam-score-viz</code> with the example data use the
 following command:</p>
 <pre class="bash"><code>qiime quality-control decontam-score-viz --i-decontam-scores comb_decontam_scores.qza --i-table table.qza --i-rep-seqs rep_seqs.qza --p-threshold 0.1 --p-no-weighted --p-bin-size 0.05 --o-visualization decontam_score_viz.qzv</code></pre>
-<p>The example output is a <code>.qzv</code> file, can be found <a href="https://github.com/jordenrabasco/q2-decontam-tutorial/raw/main/data_objs/decontam_score_viz.qzv" title="download">here</a> and can be visualized on the <a href="https://view.qiime2.org/">qiime servers</a></p>
+<p>The example output is a <code>.qzv</code> file, can be found <a href="https://github.com/jordenrabasco/q2-decontam-tutorial/raw/main/data_objs/decontam_score_viz.qzv" title="download">here</a> and can be visualized locally via <a href="https://view.qiime2.org/" class="uri">https://view.qiime2.org/</a></p>
 </div>
 <div id="remove-contaminants-identified-by-decontam" class="section level2">
 <h2>Remove Contaminants Identified by Decontam</h2>
@@ -579,6 +590,14 @@ filter-features plugin please visit their dedicated page <a href="https://docs.q
 representative sequence table free of contaminants, and can be found <a href="https://github.com/jordenrabasco/q2-decontam-tutorial/raw/main/data_objs/filtered-table.qza" title="donwload">here</a> and <a href="https://github.com/jordenrabasco/q2-decontam-tutorial/raw/main/data_objs/filtered-rep-seqs.qza" title="download">here</a> respectively.</p>
 <p>Please feel free to reach out to me at <a href="mailto:jrabasc@ncsu.edu" class="email">jrabasc@ncsu.edu</a> it you
 have any further questions!</p>
+<div id="creative-commons-attribution-4.0-international-cc-by-4.0" class="section level6">
+<h6>Creative Commons Attribution 4.0 International (CC-BY 4.0)</h6>
+</div>
+<div id="this-license-requires-that-reusers-give-credit-to-the-creator.-it-allows-reusers-to-distribute-remix-adapt-and-build-upon-the-material-in-any-medium-or-format-even-for-commercial-purposes." class="section level6">
+<h6>This license requires that reusers give credit to the creator. It
+allows reusers to distribute, remix, adapt, and build upon the material
+in any medium or format, even for commercial purposes.</h6>
+</div>
 </div>
 </div>
 
