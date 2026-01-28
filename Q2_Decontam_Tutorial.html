@@ -391,13 +391,15 @@ be helpful.</p></li>
 <li><p>To export any of the objects used within the tutorial, utilize
 the <code>qiime tools export</code> action, the documentation for which
 can be found <a href="https://docs.qiime2.org/2024.10/tutorials/exporting/">here.</a></p></li>
+<li><p>To install a local version of QIIME 2 via conda you can find
+installation instructions <a href="https://docs.qiime2.org/2024.10/install/native/">here</a>.</p></li>
 </ul>
 </div>
 <div id="installation-and-base-actions" class="section level1">
 <h1>Installation and base actions</h1>
-<p>Q2-Decontam functionality is included in the base Amplicon and
-Metagenomic QIIME 2 distributions under the quality-control umbrella.
-Q2-Decontam consists of two main actions:</p>
+<p>Q2-Decontam functionality is included by default in QIIME 2 and
+MOSHPIT distributions under the quality-control umbrella. Q2-Decontam
+consists of two main actions:</p>
 <ul>
 <li><p><code>qiime quality-control decontam-identify</code></p></li>
 <li><p><code>qiime quality-control decontam-score-viz</code></p></li>
@@ -408,9 +410,7 @@ object is then passed into the <code>decontam-score-viz</code> action to
 visualize the distribution of decontam scores and help determine where
 the threshold should be set to eliminate the majority of contaminants
 but not remove true features from the data. To remove contaminants you
-will need to utilize <code>filter-table</code> actions. To install a
-local version of QIIME 2 via conda you can find installation
-instructions <a href="https://docs.qiime2.org/2024.10/install/native/">here</a>.</p>
+will need to utilize <code>filter-table</code> actions.</p>
 </div>
 <div id="tutorial-and-walkthrough" class="section level1">
 <h1>Tutorial and Walkthrough</h1>
